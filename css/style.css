@@ -1,0 +1,288 @@
+/* style.css */
+:root {
+  --primary-color: #ff4757;
+  --primary-hover: #ff6b81;
+  --bg-color: #ffffff;
+  --text-color: #2f3542;
+  --card-bg: #ffffff;
+  --nav-bg: #ffffff;
+  --footer-bg: #2f3542;
+  --footer-text: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #ced4da;
+}
+
+body.dark-mode {
+  --bg-color: #1e272e;
+  --text-color: #f1f2f6;
+  --card-bg: #2f3542;
+  --nav-bg: #2f3542;
+  --footer-bg: #111417;
+  --input-bg: #3b424d;
+  --input-border: #57606f;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--nav-bg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.navbar-brand {
+  color: var(--primary-color) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: var(--text-color) !important;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: 25px;
+  padding: 8px 20px;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: 25px;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-bg);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  overflow: hidden;
+  color: var(--text-color);
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 80px 0;
+  background: linear-gradient(rgba(255, 71, 87, 0.1), rgba(255, 71, 87, 0.05));
+  border-radius: 0 0 50px 50px;
+  margin-bottom: 50px;
+}
+
+.hero-img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transform: rotate(-5deg);
+  transition: transform 0.3s;
+}
+
+.hero-img:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 40px 0 20px;
+  margin-top: auto;
+}
+
+footer a {
+  color: #a4b0be;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--primary-color);
+}
+
+/* Dark mode toggle */
+#darkModeToggle {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+/* Auth Forms */
+.auth-container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 15px;
+  background-color: var(--card-bg);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  color: var(--text-color);
+}
+
+.form-control {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--text-color);
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.form-control:focus {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(255, 71, 87, 0.25);
+}
+
+/* Badges/Offers */
+.offer-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* Categories */
+.category-card {
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+  cursor: pointer;
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
+}
+
+.category-card:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-5px);
+}
+
+.category-card i {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.category-card:hover i {
+  color: white;
+}
+
+/* Search Bar */
+.search-container {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+/* Reviews */
+.review-card {
+  padding: 20px;
+  text-align: center;
+}
+
+.review-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.stars {
+  color: #ffa502;
+  margin-bottom: 10px;
+}
+
+/* Cart */
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--input-border);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.cart-summary {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Gallery */
+.gallery-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}

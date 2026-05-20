@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order - BiteBliss</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .timeline { border-left: 3px solid var(--primary-color); margin-left: 20px; padding-left: 30px; position: relative; }
+        .timeline-step { margin-bottom: 30px; position: relative; }
+        .timeline-step::before {
+            content: ''; position: absolute; left: -40px; top: 0; width: 18px; height: 18px;
+            background: white; border: 4px solid var(--primary-color); border-radius: 50%;
+        }
+        .timeline-step.active::before { background: var(--primary-color); box-shadow: 0 0 0 5px rgba(255, 71, 87, 0.2); }
+        .timeline-step.pending::before { border-color: #ced4da; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-utensils"></i> BiteBliss</a>
+            <div class="ms-auto"><a href="profile.html" class="btn btn-outline-primary btn-sm">My Profile</a></div>
+        </div>
+    </nav>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4 text-center">Track Your Order</h2>
+                    <div class="card border-0 shadow-sm p-4 rounded-4">
+                        <div class="d-flex justify-content-between border-bottom pb-3 mb-4">
+                            <div>
+                                <p class="text-muted small mb-0">Order ID</p>
+                                <h5 class="fw-bold">#ORD-84739</h5>
+                            </div>
+                            <div class="text-end">
+                                <p class="text-muted small mb-0">Arriving in</p>
+                                <h5 class="fw-bold text-primary">25 mins</h5>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-step active">
+                                <h5 class="fw-bold mb-1">Order Confirmed</h5>
+                                <p class="text-muted small">Your order has been accepted.</p>
+                            </div>
+                            <div class="timeline-step active">
+                                <h5 class="fw-bold mb-1">Preparing Food</h5>
+                                <p class="text-muted small">The restaurant is preparing your delicious meal.</p>
+                            </div>
+                            <div class="timeline-step pending">
+                                <h5 class="fw-bold mb-1 text-muted">Out for Delivery</h5>
+                                <p class="text-muted small">Waiting for delivery partner to pickup.</p>
+                            </div>
+                            <div class="timeline-step pending">
+                                <h5 class="fw-bold mb-1 text-muted">Delivered</h5>
+                                <p class="text-muted small">Enjoy your meal!</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 p-3 bg-light rounded-3 d-flex align-items-center">
+                            <div class="bg-white p-2 rounded-circle me-3 shadow-sm">
+                                <i class="fas fa-motorcycle text-primary fs-3"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-0">John Smith</h6>
+                                <p class="text-muted small mb-0">Delivery Partner</p>
+                            </div>
+                            <a href="#" class="btn btn-primary rounded-circle ms-auto" style="width:40px; height:40px; display:flex; align-items:center; justify-content:center;"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - BiteBliss</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-utensils"></i> BiteBliss</a>
+            <div class="ms-auto d-flex align-items-center">
+                <span id="darkModeToggle" class="me-3" title="Toggle Dark Mode"><i class="fas fa-moon"></i></span>
+                <a href="index.html" class="btn btn-outline-danger btn-sm">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 text-center h-100">
+                        <i class="fas fa-user-circle text-primary mb-3" style="font-size: 80px;"></i>
+                        <h4 class="fw-bold">John Doe</h4>
+                        <p class="text-muted">john.doe@example.com<br>+91 9876543210</p>
+                        <button class="btn btn-outline-primary rounded-pill mt-3 w-100">Edit Profile</button>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                        <h4 class="fw-bold mb-4">Recent Orders</h4>
+                        <div class="border-bottom pb-3 mb-3 d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="fw-bold mb-1">Burger & Smoothie</h6>
+                                <p class="text-muted small mb-0">Today, 2:30 PM &bull; ₹394</p>
+                            </div>
+                            <span class="badge bg-success">Delivered</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="fw-bold mb-1">Pepperoni Pizza</h6>
+                                <p class="text-muted small mb-0">Yesterday, 8:15 PM &bull; ₹299</p>
+                            </div>
+                            <span class="badge bg-success">Delivered</span>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4 p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="fw-bold mb-0">Saved Addresses</h4>
+                            <button class="btn btn-sm btn-primary rounded-pill">+ Add New</button>
+                        </div>
+                        <div class="bg-light p-3 rounded-3 mb-2 border border-primary">
+                            <h6 class="fw-bold"><i class="fas fa-home text-primary me-2"></i> Home</h6>
+                            <p class="text-muted small mb-0">123, Rose Street, Culinary City, NY 10001</p>
+                        </div>
+                        <div class="bg-light p-3 rounded-3">
+                            <h6 class="fw-bold"><i class="fas fa-briefcase text-muted me-2"></i> Office</h6>
+                            <p class="text-muted small mb-0">Tech Park, 4th Floor, Culinary City, NY 10005</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 BiteBliss. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
