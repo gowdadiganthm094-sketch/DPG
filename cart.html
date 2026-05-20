@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - BiteBliss</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-utensils"></i> BiteBliss</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="offers.html">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center mt-2 mt-lg-0">
+                    <span id="darkModeToggle" class="me-3" title="Toggle Dark Mode"><i class="fas fa-moon"></i></span>
+                    <a href="cart.html" class="nav-link me-3 active"><i class="fas fa-shopping-cart text-primary"></i> <span class="badge bg-danger rounded-pill">2</span></a>
+                    <a href="login.html" class="btn btn-outline-primary btn-sm me-2">Login</a>
+                    <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="fw-bold">Your Cart</h1>
+                <p class="text-muted">Review your items and checkout</p>
+            </div>
+            
+            <div class="row g-5">
+                <!-- Cart Items -->
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                        <div class="d-flex justify-content-between border-bottom pb-3 mb-3">
+                            <h5 class="fw-bold mb-0">Items (2)</h5>
+                            <a href="menu.html" class="text-primary text-decoration-none">Add more items</a>
+                        </div>
+                        
+                        <!-- Item 1 -->
+                        <div class="cart-item">
+                            <img src="images/burger.png" alt="Classic Burger">
+                            <div class="flex-grow-1">
+                                <h5 class="fw-bold mb-1">Classic Cheeseburger</h5>
+                                <p class="text-muted small mb-2">Extra cheese, no onions</p>
+                                <h5 class="text-primary fw-bold mb-0">₹199</h5>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <button class="btn btn-sm btn-outline-secondary px-2 py-0 fs-5">-</button>
+                                <span class="mx-3 fw-bold">1</span>
+                                <button class="btn btn-sm btn-outline-secondary px-2 py-0 fs-5">+</button>
+                                <button class="btn btn-sm text-danger ms-4"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="cart-item border-bottom-0 pb-0">
+                            <img src="images/smoothie.png" alt="Strawberry Smoothie">
+                            <div class="flex-grow-1">
+                                <h5 class="fw-bold mb-1">Strawberry Smoothie</h5>
+                                <p class="text-muted small mb-2">Large size</p>
+                                <h5 class="text-primary fw-bold mb-0">₹129</h5>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <button class="btn btn-sm btn-outline-secondary px-2 py-0 fs-5">-</button>
+                                <span class="mx-3 fw-bold">1</span>
+                                <button class="btn btn-sm btn-outline-secondary px-2 py-0 fs-5">+</button>
+                                <button class="btn btn-sm text-danger ms-4"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="cart-summary">
+                        <h4 class="fw-bold mb-4">Order Summary</h4>
+                        
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-muted">Subtotal</span>
+                            <span class="fw-bold">₹328</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-muted">Delivery Fee</span>
+                            <span class="fw-bold">₹40</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-muted">Tax</span>
+                            <span class="fw-bold">₹26</span>
+                        </div>
+                        
+                        <hr class="my-4">
+                        
+                        <div class="d-flex justify-content-between mb-4">
+                            <h5 class="fw-bold mb-0">Total</h5>
+                            <h4 class="text-primary fw-bold mb-0">₹394</h4>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label text-muted small">Promo Code</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter code">
+                                <button class="btn btn-outline-primary" type="button">Apply</button>
+                            </div>
+                        </div>
+                        
+                        <a href="checkout.html" class="btn btn-primary btn-lg w-100 fw-bold rounded-pill text-center d-block">Checkout <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-utensils text-primary"></i> BiteBliss</h5>
+                    <p class="mt-3">Your ultimate destination for satisfying cravings. We deliver happiness, one bite at a time.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="menu.html">Our Menu</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Support</a></li>
+                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Connect With Us</h5>
+                    <div class="d-flex gap-3 mt-3 fs-4">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="mt-3"><i class="fas fa-envelope me-2"></i> info@bitebliss.com</p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center mt-3">
+                <p class="mb-0">&copy; 2026 BiteBliss. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
